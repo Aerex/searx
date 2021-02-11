@@ -27,7 +27,7 @@
 <!-- rp -->
 <g id="node2" class="node">
 <title>rp</title>
-<g id="a_node2"><a xlink:href="https://asciimoo.github.io/searx/utils/filtron.sh.html#public-reverse-proxy" xlink:title="Reverse Proxy">
+<g id="a_node2"><a xlink:href="https://searx.github.io/searx/utils/filtron.sh.html#public-reverse-proxy" xlink:title="Reverse Proxy">
 <polygon fill="#ffffcc" stroke="black" points="131.5,-299 16.5,-299 16.5,-263 131.5,-263 131.5,-299"/>
 <text text-anchor="middle" x="74" y="-277.3" font-family="Sans" font-size="14.00">Reverse Proxy</text>
 </a>
@@ -43,7 +43,7 @@
 <!-- filtron -->
 <g id="node3" class="node">
 <title>filtron</title>
-<g id="a_node3"><a xlink:href="https://asciimoo.github.io/searx/utils/filtron.sh.html" xlink:title="Filtron">
+<g id="a_node3"><a xlink:href="https://searx.github.io/searx/utils/filtron.sh.html" xlink:title="Filtron">
 <polygon fill="#ffffcc" stroke="black" points="103.5,-212 44.5,-212 44.5,-176 103.5,-176 103.5,-212"/>
 <text text-anchor="middle" x="74" y="-190.3" font-family="Sans" font-size="14.00">Filtron</text>
 </a>
@@ -59,7 +59,7 @@
 <!-- morty -->
 <g id="node4" class="node">
 <title>morty</title>
-<g id="a_node4"><a xlink:href="https://asciimoo.github.io/searx/utils/morty.sh.html" xlink:title="Morty">
+<g id="a_node4"><a xlink:href="https://searx.github.io/searx/utils/morty.sh.html" xlink:title="Morty">
 <polygon fill="#ffffcc" stroke="black" points="178,-212 122,-212 122,-176 178,-176 178,-212"/>
 <text text-anchor="middle" x="150" y="-190.3" font-family="Sans" font-size="14.00">Morty</text>
 </a>
@@ -91,7 +91,7 @@
 <!-- uwsgi -->
 <g id="node6" class="node">
 <title>uwsgi</title>
-<g id="a_node6"><a xlink:href="https://asciimoo.github.io/searx/utils/searx.sh.html" xlink:title="uwsgi">
+<g id="a_node6"><a xlink:href="https://searx.github.io/searx/utils/searx.sh.html" xlink:title="uwsgi">
 <polygon fill="#ffffcc" stroke="black" points="184.5,-125 127.5,-125 127.5,-89 184.5,-89 184.5,-125"/>
 <text text-anchor="middle" x="156" y="-103.3" font-family="Sans" font-size="14.00">uwsgi</text>
 </a>

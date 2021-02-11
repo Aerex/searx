@@ -6,7 +6,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>How to update &#8212; Searx Documentation (Searx-0.18.0.tex)</title>
+    <title>Overview: module code &#8212; Searx Documentation (Searx-0.18.0.tex)</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
     <link rel="stylesheet" href="../_static/searx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
@@ -21,8 +21,6 @@
     <script src="../_static/sphinx_tabs/tabs.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="settings.yml" href="settings.html" />
-    <link rel="prev" title="Docker installation" href="installation-docker.html" />
   <script>DOCUMENTATION_OPTIONS.URL_ROOT = '../';</script>
    
   </head><body>
@@ -35,15 +33,8 @@
         <li class="right" >
           <a href="../py-modindex.html" title="Python Module Index"
              >modules</a> |</li>
-        <li class="right" >
-          <a href="settings.html" title="settings.yml"
-             accesskey="N">next</a> |</li>
-        <li class="right" >
-          <a href="installation-docker.html" title="Docker installation"
-             accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="../index.html">Searx Documentation (Searx-0.18.0.tex)</a> &#187;</li>
-          <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Administrator documentation</a> &#187;</li>
-        <li class="nav-item nav-item-this"><a href="">How to update</a></li> 
+        <li class="nav-item nav-item-this"><a href="">Overview: module code</a></li> 
       </ul>
     </div>  
 
@@ -52,32 +43,9 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="how-to-update">
-<span id="update-searx"></span><h1>How to update<a class="headerlink" href="#how-to-update" title="Permalink to this headline">¶</a></h1>
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo -H -u searx -i
-<span class="o">(</span>searx<span class="o">)</span>$ git stash
-<span class="o">(</span>searx<span class="o">)</span>$ git pull origin master
-<span class="o">(</span>searx<span class="o">)</span>$ git stash apply
-<span class="o">(</span>searx<span class="o">)</span>$ ./manage.sh update_packages
-</pre></div>
-</div>
-<p>Restart uwsgi:</p>
-<div class="sphinx-tabs docutils container">
-<div class="ui top attached tabular menu sphinx-menu docutils container">
-<div class="active item sphinx-data-tab-VWJ1bnR1IC8gZGViaWFu docutils container">
-<div class="docutils container">
-<p>Ubuntu / debian</p>
-</div>
-</div>
-</div>
-<div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-VWJ1bnR1IC8gZGViaWFu active docutils container">
-<div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>sudo -H systemctl restart uwsgi
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-
+  <h1>All modules for which code is available</h1>
+<ul><li><a href="standalone_searx.html">standalone_searx</a></li>
+</ul>
 
             <div class="clearer"></div>
           </div>
@@ -107,13 +75,7 @@
   </ul><h3>Navigation</h3>
 <ul>
   <li><a href="../index.html">Overview</a>
-    <ul>
-      <li><a href="index.html">Administrator documentation</a>
-        <ul>
-          <li>Previous: <a href="installation-docker.html" title="previous chapter">Docker installation</a>
-          <li>Next: <a href="settings.html" title="next chapter"><code class="docutils literal notranslate"><span class="pre">settings.yml</span></code></a></ul>
-      </li>
-    </ul>
+    
   </li>
 </ul>
 <div id="searchbox" style="display: none" role="search">

@@ -4,11 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>utils/filtron.sh &#8212; Searx Documentation (Searx-0.17.0.tex)</title>
-    <link rel="stylesheet" href="../_static/searx.css" type="text/css" />
+    <title>utils/filtron.sh &#8212; Searx Documentation (Searx-0.18.0.tex)</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/searx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
@@ -17,7 +17,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
     <script src="../_static/sphinx_tabs/tabs.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -34,12 +33,15 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="morty.sh.html" title="utils/morty.sh"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="searx.sh.html" title="utils/searx.sh"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Searx Documentation (Searx-0.17.0.tex)</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Searx Documentation (Searx-0.18.0.tex)</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Tooling box <code class="docutils literal notranslate"><span class="pre">utils/*</span></code></a> &#187;</li>
         <li class="nav-item nav-item-this"><a href=""><code class="docutils literal notranslate"><span class="pre">utils/filtron.sh</span></code></a></li> 
       </ul>
@@ -61,7 +63,7 @@
 </ul>
 </div>
 <p>To simplify installation and maintenance of a filtron instance you can use the
-script <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/utils/filtron.sh">git://utils/filtron.sh</a>.  In most cases you will install <a class="reference external" href="https://github.com/asciimoo/filtron">filtron</a>
+script <a class="reference external" href="https://github.com/searx/searx/blob/master/utils/filtron.sh">git://utils/filtron.sh</a>.  In most cases you will install <a class="reference external" href="https://github.com/asciimoo/filtron">filtron</a>
 simply by running the command:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>sudo -H ./utils/filtron.sh install all
 </pre></div>
@@ -73,8 +75,8 @@ into this user account:</p>
 <li><p>Download and install <a class="reference external" href="https://golang.org/">Go</a> binary in user’s $HOME (<code class="docutils literal notranslate"><span class="pre">~filtron</span></code>).</p></li>
 <li><p>Install filtron with the package management from <a class="reference external" href="https://golang.org/">Go</a> (<code class="docutils literal notranslate"><span class="pre">go</span> <span class="pre">get</span> <span class="pre">-v</span> <span class="pre">-u</span>
 <span class="pre">github.com/asciimoo/filtron</span></code>)</p></li>
-<li><p>Setup a proper rule configuration <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/utils/templates/etc/filtron/rules.json">[ref]</a> (<code class="docutils literal notranslate"><span class="pre">/etc/filtron/rules.json</span></code>).</p></li>
-<li><p>Setup a systemd service unit <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/utils/templates/lib/systemd/system/filtron.service">[ref]</a>
+<li><p>Setup a proper rule configuration <a class="reference external" href="https://github.com/searx/searx/blob/master/utils/templates/etc/filtron/rules.json">[ref]</a> (<code class="docutils literal notranslate"><span class="pre">/etc/filtron/rules.json</span></code>).</p></li>
+<li><p>Setup a systemd service unit <a class="reference external" href="https://github.com/searx/searx/blob/master/utils/templates/lib/systemd/system/filtron.service">[ref]</a>
 (<code class="docutils literal notranslate"><span class="pre">/lib/systemd/system/filtron.service</span></code>).</p></li>
 </ol>
 <div class="section" id="create-user">
@@ -89,11 +91,11 @@ into this user account:</p>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-YmFzaA== active docutils container">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo -H useradd --shell /bin/bash --system <span class="se">\</span>
-    --home-dir /usr/local/filtron <span class="se">\</span>
-    --comment Privacy-respecting metasearch engine filtron
+    --home-dir <span class="s2">&quot;/usr/local/filtron&quot;</span> <span class="se">\</span>
+    --comment <span class="s2">&quot;Privacy-respecting metasearch engine&quot;</span> filtron
 
-$ sudo -H mkdir /usr/local/filtron
-$ sudo -H chown -R filtron:filtron /usr/local/filtron
+$ sudo -H mkdir <span class="s2">&quot;/usr/local/filtron&quot;</span>
+$ sudo -H chown -R <span class="s2">&quot;filtron:filtron&quot;</span> <span class="s2">&quot;/usr/local/filtron&quot;</span>
 </pre></div>
 </div>
 </div>
@@ -110,16 +112,16 @@ $ sudo -H chown -R filtron:filtron /usr/local/filtron
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-YmFzaA== active docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat &gt; /usr/local/filtron/.go_env <span class="s">&lt;&lt;EOF</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ cat &gt; <span class="s2">&quot;/usr/local/filtron/.go_env&quot;</span> <span class="s">&lt;&lt;EOF</span>
 <span class="s">export GOPATH=/usr/local/filtron/go-apps</span>
 <span class="s">export PATH=$PATH:/usr/local/filtron/local/go/bin:$GOPATH/bin</span>
 <span class="s">EOF</span>
-$ sudo -i -u filtron
+$ sudo -i -u <span class="s2">&quot;filtron&quot;</span>
 <span class="o">(</span>filtron<span class="o">)</span> $ <span class="nb">echo</span> <span class="s1">&#39;source /usr/local/filtron/.go_env&#39;</span> &gt;&gt; ~/.profile
 <span class="o">(</span>filtron<span class="o">)</span> $ mkdir /usr/local/filtron/local
-<span class="o">(</span>filtron<span class="o">)</span> $ wget --progress<span class="o">=</span>bar -O go1.13.5.linux-amd64.tar.gz <span class="se">\</span>
-            https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz
-<span class="o">(</span>filtron<span class="o">)</span> $ tar -C /usr/local/filtron/local/go -xzf go1.13.5.linux-amd64.tar.gz
+<span class="o">(</span>filtron<span class="o">)</span> $ wget --progress<span class="o">=</span>bar -O <span class="s2">&quot;go1.13.5.linux-amd64.tar.gz&quot;</span> <span class="se">\</span>
+            <span class="s2">&quot;https://dl.google.com/go/go1.13.5.linux-amd64.tar.gz&quot;</span>
+<span class="o">(</span>filtron<span class="o">)</span> $ tar -C /usr/local/filtron/local -xzf <span class="s2">&quot;go1.13.5.linux-amd64.tar.gz&quot;</span>
 <span class="o">(</span>filtron<span class="o">)</span> $ which go
 /usr/local/filtron/local/go/bin/go
 </pre></div>
@@ -129,7 +131,7 @@ $ sudo -i -u filtron
 </div>
 <div class="section" id="install-filtron">
 <h2>Install filtron<a class="headerlink" href="#install-filtron" title="Permalink to this headline">¶</a></h2>
-<p>Install <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/utils/templates/etc/filtron/rules.json">rules.json</a> at
+<p>Install <a class="reference external" href="https://github.com/searx/searx/blob/master/utils/templates/etc/filtron/rules.json">rules.json</a> at
 <code class="docutils literal notranslate"><span class="pre">/etc/filtron/rules.json</span></code> (see <a class="reference internal" href="../admin/filtron.html#sample-configuration-of-filtron"><span class="std std-ref">Sample configuration of filtron</span></a>) and
 install filtron software and systemd unit:</p>
 <div class="sphinx-tabs docutils container">
@@ -141,7 +143,7 @@ install filtron software and systemd unit:</p>
 </div>
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-YmFzaA== active docutils container">
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo -i -u filtron
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo -i -u <span class="s2">&quot;filtron&quot;</span>
 <span class="o">(</span>filtron<span class="o">)</span> $ go get -v -u github.com/asciimoo/filtron
 </pre></div>
 </div>
@@ -222,18 +224,18 @@ inspect service
   show service status and log
 option
   set one of the available options
-apache (http://192.168.1.127/searx)
+apache (http://fv-az99-538/searx)
   :install: apache site with a reverse proxy (ProxyPass)
   :remove:  apache site searx.conf
-nginx (http://192.168.1.127/searx)
+nginx (http://fv-az99-538/searx)
   :install: nginx site with a reverse proxy (ProxyPass)
   :remove:  nginx site searx.conf
 
 filtron rules: /etc/filtron/rules.json
 
 If needed, set PUBLIC_URL of your WEB service in the &#39;.config.sh&#39; file::
-  PUBLIC_URL     : http://192.168.1.127/searx
-  PUBLIC_HOST    : 192.168.1.127
+  PUBLIC_URL     : http://fv-az99-538/searx
+  PUBLIC_HOST    : fv-az99-538
   SERVICE_USER   : filtron
   FILTRON_TARGET : 127.0.0.1:8888
   FILTRON_API    : 127.0.0.1:4005
@@ -260,13 +262,15 @@ If needed, set PUBLIC_URL of your WEB service in the &#39;.config.sh&#39; file::
 
   <h3>Project Links</h3>
   <ul>
-    <li><a href="https://github.com/asciimoo/searx">Source</a>
+    <li><a href="https://github.com/searx/searx">Source</a>
   
-    <li><a href="https://github.com/asciimoo/searx/wiki">Wiki</a>
+    <li><a href="https://github.com/searx/searx/wiki">Wiki</a>
   
-    <li><a href="https://searx.space/">Public instances</a>
+    <li><a href="https://searx.space">Public instances</a>
   
     <li><a href="https://twitter.com/Searx_engine">Twitter</a>
+  
+    <li><a href="https://github.com/searx/searx/issues">Issue Tracker</a>
   </ul><h3>Navigation</h3>
 <ul>
   <li><a href="../index.html">Overview</a>
@@ -296,7 +300,7 @@ If needed, set PUBLIC_URL of your WEB service in the &#39;.config.sh&#39; file::
   
     <div class="footer" role="contentinfo">
         &#169; Copyright 2015-2020, Adam Tauber, Noémi Ványi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.1.
     </div>
   <script src="../_static/version_warning_offset.js"></script>
 

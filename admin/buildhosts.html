@@ -4,11 +4,11 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Buildhosts &#8212; Searx Documentation (Searx-0.17.0.tex)</title>
-    <link rel="stylesheet" href="../_static/searx.css" type="text/css" />
+    <title>Buildhosts &#8212; Searx Documentation (Searx-0.18.0.tex)</title>
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/searx.css" type="text/css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/segment.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/menu.min.css" />
     <link rel="stylesheet" type="text/css" href="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.css" />
@@ -17,7 +17,6 @@
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
     <script src="../_static/doctools.js"></script>
-    <script src="../_static/language_data.js"></script>
     <script src="../_static/sphinx_tabs/semantic-ui-2.4.1/tab.min.js"></script>
     <script src="../_static/sphinx_tabs/tabs.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -34,12 +33,15 @@
           <a href="../genindex.html" title="General Index"
              accesskey="I">index</a></li>
         <li class="right" >
+          <a href="../py-modindex.html" title="Python Module Index"
+             >modules</a> |</li>
+        <li class="right" >
           <a href="../dev/index.html" title="Developer documentation"
              accesskey="N">next</a> |</li>
         <li class="right" >
           <a href="plugins.html" title="Plugins builtin"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="../index.html">Searx Documentation (Searx-0.17.0.tex)</a> &#187;</li>
+        <li class="nav-item nav-item-0"><a href="../index.html">Searx Documentation (Searx-0.18.0.tex)</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="index.html" accesskey="U">Administrator documentation</a> &#187;</li>
         <li class="nav-item nav-item-this"><a href="">Buildhosts</a></li> 
       </ul>
@@ -54,7 +56,7 @@
 <span id="id1"></span><h1>Buildhosts<a class="headerlink" href="#buildhosts" title="Permalink to this headline">¶</a></h1>
 <div class="sidebar">
 <p class="sidebar-title">This article needs some work</p>
-<p>If you have any contribution send us your <a class="reference external" href="https://github.com/asciimoo/searx/pull/../pulls">PR</a>, see
+<p>If you have any contribution send us your <a class="reference external" href="https://github.com/searx/searx/pull/../pulls">PR</a>, see
 <a class="reference internal" href="../dev/contribution_guide.html#how-to-contribute"><span class="std std-ref">How to contribute</span></a>.</p>
 </div>
 <div class="contents local topic" id="contents">
@@ -90,7 +92,7 @@ on build hosts (see <a class="reference internal" href="../utils/searx.sh.html#s
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-VWJ1bnR1IC8gZGViaWFu active docutils container">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo -H apt-get install -y <span class="se">\</span>
-    virtualenv python3-dev python3-babel python3-venv <span class="se">\</span>
+    python3-dev python3-babel python3-venv <span class="se">\</span>
     uwsgi uwsgi-plugin-python3 <span class="se">\</span>
     git build-essential libxslt-dev zlib1g-dev libffi-dev libssl-dev <span class="se">\</span>
     shellcheck
@@ -99,7 +101,7 @@ on build hosts (see <a class="reference internal" href="../utils/searx.sh.html#s
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-QXJjaCBMaW51eA== docutils container">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo -H pacman -S --noconfirm <span class="se">\</span>
-    python-virtualenv python python-pip python-lxml python-babel <span class="se">\</span>
+    python python-pip python-lxml python-babel <span class="se">\</span>
     uwsgi uwsgi-plugin-python <span class="se">\</span>
     git base-devel libxml2 <span class="se">\</span>
     shellcheck
@@ -108,7 +110,7 @@ on build hosts (see <a class="reference internal" href="../utils/searx.sh.html#s
 </div>
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-RmVkb3JhIC8gUkhFTA== docutils container">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo -H dnf install -y <span class="se">\</span>
-    virtualenv python python-pip python-lxml python-babel <span class="se">\</span>
+    python python-pip python-lxml python-babel <span class="se">\</span>
     uwsgi uwsgi-plugin-python3 <span class="se">\</span>
     git @development-tools libxml2 <span class="se">\</span>
     ShellCheck
@@ -138,7 +140,7 @@ on build hosts (see <a class="reference internal" href="../utils/searx.sh.html#s
 <div class="ui bottom attached sphinx-tab tab segment sphinx-data-tab-VWJ1bnR1IC8gZGViaWFu active docutils container">
 <div class="highlight-sh notranslate"><div class="highlight"><pre><span></span>$ sudo -H apt-get install -y <span class="se">\</span>
     firefox graphviz imagemagick texlive-xetex librsvg2-bin <span class="se">\</span>
-    texlive-latex-recommended texlive-extra-utils ttf-dejavu <span class="se">\</span>
+    texlive-latex-recommended texlive-extra-utils fonts-dejavu <span class="se">\</span>
     latexmk
 </pre></div>
 </div>
@@ -171,13 +173,13 @@ on build hosts (see <a class="reference internal" href="../utils/searx.sh.html#s
 <li><p><a class="reference external" href="https://dvisvgm.de/">dvisvgm</a></p></li>
 </ul>
 </div>
-<p>Most of the sphinx requirements are installed from <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/setup.py">git://setup.py</a> and the
+<p>Most of the sphinx requirements are installed from <a class="reference external" href="https://github.com/searx/searx/blob/master/setup.py">git://setup.py</a> and the
 docs can be build from scratch with <code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code>.  For better math and image
 processing additional packages are needed.  The <a class="reference external" href="https://tug.org/xetex/">XeTeX</a> needed not only for PDF
 creation, its also needed for <a class="reference internal" href="../dev/reST.html#math"><span class="std std-ref">Math equations</span></a> when HTML output is build.</p>
 <p>To be able to do <a class="reference external" href="https://www.sphinx-doc.org/en/master/usage/extensions/math.html#math-support" title="(in Sphinx v4.0.0+)"><span>Math support for HTML outputs in Sphinx</span></a> without CDNs, the math are rendered
 as images (<code class="docutils literal notranslate"><span class="pre">sphinx.ext.imgmath</span></code> extension).</p>
-<p>Here is the extract from the <a class="reference external" href="https://github.com/asciimoo/searx/blob/master/docs/conf.py">git://docs/conf.py</a> file, setting math renderer
+<p>Here is the extract from the <a class="reference external" href="https://github.com/searx/searx/blob/master/docs/conf.py">git://docs/conf.py</a> file, setting math renderer
 to <code class="docutils literal notranslate"><span class="pre">imgmath</span></code>:</p>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">html_math_renderer</span> <span class="o">=</span> <span class="s1">&#39;imgmath&#39;</span>
 <span class="n">imgmath_image_format</span> <span class="o">=</span> <span class="s1">&#39;svg&#39;</span>
@@ -186,7 +188,7 @@ to <code class="docutils literal notranslate"><span class="pre">imgmath</span></
 </div>
 <p>If your docs build (<code class="docutils literal notranslate"><span class="pre">make</span> <span class="pre">docs</span></code>) shows warnings like this:</p>
 <div class="highlight-none notranslate"><div class="highlight"><pre><span></span>WARNING: dot(1) not found, for better output quality install \
-         graphviz from http://www.graphviz.org
+         graphviz from https://www.graphviz.org
 ..
 WARNING: LaTeX command &#39;latex&#39; cannot be run (needed for math \
          display), check the imgmath_latex setting
@@ -324,13 +326,15 @@ output.</p>
 
   <h3>Project Links</h3>
   <ul>
-    <li><a href="https://github.com/asciimoo/searx">Source</a>
+    <li><a href="https://github.com/searx/searx">Source</a>
   
-    <li><a href="https://github.com/asciimoo/searx/wiki">Wiki</a>
+    <li><a href="https://github.com/searx/searx/wiki">Wiki</a>
   
-    <li><a href="https://searx.space/">Public instances</a>
+    <li><a href="https://searx.space">Public instances</a>
   
     <li><a href="https://twitter.com/Searx_engine">Twitter</a>
+  
+    <li><a href="https://github.com/searx/searx/issues">Issue Tracker</a>
   </ul><h3>Navigation</h3>
 <ul>
   <li><a href="../index.html">Overview</a>
@@ -360,7 +364,7 @@ output.</p>
   
     <div class="footer" role="contentinfo">
         &#169; Copyright 2015-2020, Adam Tauber, Noémi Ványi.
-      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.1.2.
+      Created using <a href="https://www.sphinx-doc.org/">Sphinx</a> 3.4.1.
     </div>
   <script src="../_static/version_warning_offset.js"></script>
 
